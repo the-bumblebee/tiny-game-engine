@@ -49,6 +49,12 @@ namespace TinyEngine {
         void operator%=(const Vector3d& v);
         Vector3d operator%(const Vector3d& v) const;
 
+        //Magnitude
+        float magnitude() const;
+
+        //Unit vector
+        void normalize();
+
         //Overloading << operator for printing class object.
         friend std::ostream& operator<< (std::ostream &out, const Vector3d& v);
     };

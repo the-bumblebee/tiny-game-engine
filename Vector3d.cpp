@@ -1,4 +1,5 @@
 #include <iostream>
+#include <math.h>
 #include "Vector3d.h"
 
 namespace TinyEngine {
@@ -79,6 +80,23 @@ namespace TinyEngine {
         return Vector3d(this->y*v.z - this->z*v.y,
                         this->z*v.x - this->x*v.z,
                         this->x*v.y - this->y*v.x);
+    }
+
+    //Magnitude
+    float Vector3d::magnitude() const {
+        float magnitude = std::sqrt(x*x + y*y + z*z);
+        return magnitude;
+    }
+
+    //Unit vector
+    void Vector3d::normalize() {
+
+        float magnitude = this->magnitude();
+        float oneOverMag = 1.0f/magnitude;
+
+        this->x = this->x / oneOverMag;
+        this->y = this->y / oneOverMag;
+        this->z = this->z / oneOverMag;
     }
 
     //Overloading << operator for printing class object.
