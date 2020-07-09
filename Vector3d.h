@@ -21,15 +21,15 @@ namespace TinyEngine {
         ~Vector3d();
 
         //Copy constructors
-        Vector3d(const Vector3d& v);
-        Vector3d& operator=(const Vector3d& v);
+        Vector3d(const Vector3d &v);
+        Vector3d& operator=(const Vector3d &v);
 
         //Vector addition
-        void operator+=(const Vector3d& v);
+        void operator+=(const Vector3d &v);
         Vector3d operator+(const Vector3d &v) const;
 
         //Vector subtraction
-        void operator-=(const Vector3d& v);
+        void operator-=(const Vector3d &v);
         Vector3d operator-(const Vector3d &v) const;
 
         //Scalar multiplication
@@ -41,13 +41,13 @@ namespace TinyEngine {
         Vector3d operator/(float s) const;
 
         //Dot product (* operator can be used)
-        float operator*(const Vector3d& v) const;
-        float dot(const Vector3d& v) const;
+        float operator*(const Vector3d &v) const;
+        float dot(const Vector3d &v) const;
 
         //Cross product (% operator can be used)
-        Vector3d cross(const Vector3d& v) const;
-        void operator%=(const Vector3d& v);
-        Vector3d operator%(const Vector3d& v) const;
+        Vector3d cross(const Vector3d &v) const;
+        void operator%=(const Vector3d &v);
+        Vector3d operator%(const Vector3d &v) const;
 
         //Magnitude
         float magnitude() const;
@@ -56,7 +56,7 @@ namespace TinyEngine {
         void normalize();
 
         //Overloading << operator for printing class object.
-        friend std::ostream& operator<< (std::ostream &out, const Vector3d& v);
+        friend std::ostream& operator<< (std::ostream &out, const Vector3d &v);
     };
 }
 
