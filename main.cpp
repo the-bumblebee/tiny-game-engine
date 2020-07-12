@@ -1,14 +1,12 @@
 #include <iostream>
 #include "Vector3d.h"
+#include "Matrix3n.h"
 
 using namespace std;
 using namespace TinyEngine;
 
 int main() {
-    Vector3d x = Vector3d(2, 4, 5);
-    Vector3d y = Vector3d(1, 1, 1);
-    Vector3d z = Vector3d(1.1, 0, 1);
-    Vector3d k = z % x;
-    cout<<k<<" "<<z<<"\n";
+    Matrix3n x = Matrix3n(1,2,3,4,5,6,7,8,9);
+    cout << "\n" << x << "\n";
     return 0;
 }
